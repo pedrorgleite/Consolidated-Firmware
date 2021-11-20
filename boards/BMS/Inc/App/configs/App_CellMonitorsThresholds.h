@@ -7,3 +7,6 @@
 
 #define MIN_ITMP_DEGC 0.0f
 #define MAX_ITMP_DEGC 120.0f
+
+#define MIN_cell_DEGC -20.0f
+#define MAX_cell_DEGC 50.0f

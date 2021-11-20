@@ -269,10 +269,17 @@ int main(void)
         Io_DieTemperatures_GetSegment3DieTemp,
         Io_DieTemperatures_GetSegment4DieTemp,
         Io_DieTemperatures_GetSegment5DieTemp, Io_DieTemperatures_GetMaxDieTemp,
+        Io_CellTemperatures_GetAverageCellTemperature,
+        Io_CellTemperatures_GetMinCellTemperature,
+        Io_CellTemperatures_GetMaxCellTemperature,
+        Io_CellTemperatures_ReadTemperatures,
+        Io_CellTemperatures_ReadRawThermistorVoltages,
+        Io_CellTemperatures_ParseThermistorVoltagesAndPerformPec15Check,
         MIN_ITMP_DEGC, MAX_ITMP_DEGC, DIE_TEMP_TO_REENABLE_CHARGER_DEGC,
         DIE_TEMP_TO_REENABLE_CELL_BALANCING_DEGC,
         DIE_TEMP_TO_DISABLE_CELL_BALANCING_DEGC,
-        DIE_TEMP_TO_DISABLE_CHARGER_DEGC);
+        DIE_TEMP_TO_DISABLE_CHARGER_DEGC
+        MIN_CELL_DEGC, MAX_CELL_DEGC);
 
     airs = App_Airs_Create(
         Io_Airs_IsAirPositiveClosed, Io_Airs_IsAirNegativeClosed,

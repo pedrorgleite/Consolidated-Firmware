@@ -67,13 +67,20 @@ struct CellMonitors *App_CellMonitors_Create(
     float (*get_monitor_4_die_temp)(void),
     float (*get_monitor_5_die_temp)(void),
     float (*get_max_die_temp)(void),
+    float (*get_avg_cell_temp)(void),
+    uint32_t (*get_min_cell_temp)(void),
+    uint32_t (*get_max_cell_temp)(void),
+    ExitCode (*read_cell_temps)(void),
+    ExitCode (*read_raw_cell_temps)(void),
+    ExitCode (*parse_thermistor_voltages_and_perform_pec15_check)(size_t, size_t, uint8_t ),
     float min_die_temp_degc,
     float max_die_temp_degc,
     float die_temp_to_re_enable_charger_degc,
     float die_temp_to_re_enable_cell_balancing_degc,
     float die_temp_to_disable_cell_balancing_degc,
-    float die_temp_to_disable_charger_degc);
-
+    float die_temp_to_disable_charger_degc,
+    float min_cell_temp_degc,
+    float max_cell_temp_degc)
 /**
  * Deallocate the given group of cell monitors
  * @param cell_monitors The group of cell monitors to deallocate
